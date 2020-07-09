@@ -1,0 +1,95 @@
+.lightpaper {
+    position: relative;
+    background: linear-gradient(var(--color-dark-blue) 50%, #fff 50%); 
+    margin-top: -1px;
+
+    &__layer {
+        background: var(--color-light-blue) url('../img/docs.svg') no-repeat 0 100%;
+        position: relative;
+    
+        @media screen and (min-width: 376px) {
+            background: var(--color-light-blue);
+            width: 91%;
+            padding-top: 0;
+        }
+    }
+    
+    &__bg {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        top: -55px;
+        left: 35px;
+
+        @media screen and (min-width: 376px) {
+            left: 713px;
+            top: 20px;
+            transform: scale(1.42);
+        }
+    }
+
+    &__inner {
+        padding: 194px 0 82px;
+
+        @media screen and (min-width: 376px) {
+            display: flex;
+            padding: 67px 0 84px 66px; 
+            width: 488px;
+            justify-content: space-between;
+            background: url('../img/docs.svg') no-repeat 13% 100%;
+        }
+    }
+
+    &__title {
+        @include font(2.2rem, 400, #fff);
+        font-family: proxima-xbold;
+        text-transform: uppercase;
+        letter-spacing: 0.64px;
+        margin-bottom: 36px;
+
+        @media screen and (min-width: 376px) {
+            @include font(3.2rem, 400, #fff);
+            margin-right: 92px;
+        }
+    }
+
+    &__text {
+        @include font(1.6rem, 400, #fff);
+        font-family: proxima-regular;
+        line-height: 24px;
+        letter-spacing: 0.46px;
+
+        @media screen and (min-width: 376px) {
+            @include font(2.4rem, 400, #fff);
+            padding-top: 41px;
+        }
+    }
+
+    &__link {
+        @include font(1.6rem, 700, var(--color-dark-blue));
+        font-family: proxima-regular;
+        text-transform: uppercase;
+        letter-spacing: 0.46px;
+        position: absolute;
+        text-decoration: none;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -28px;
+        z-index: 10;
+        padding: 19px 92px 19px 92px;
+        background-color: var(--color-yellow);
+        transition: transform .4s;
+
+
+        &:hover {
+            transform: translate(-50%, -5px);
+        }
+
+        @media screen and (min-width: 376px) {
+            @include font(2.2rem, 700, var(--color-dark-blue));
+            padding: 25px 130px 25px 130px;
+            left: 425px;
+            bottom: -36px;
+        }
+    }
+}
